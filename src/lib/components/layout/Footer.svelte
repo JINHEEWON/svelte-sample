@@ -1,0 +1,1 @@
+<footer class="w-full text-center py-4 text-gray-400 text-sm border-t mt-8">© 2024 Sample Project. All rights reserved.</footer> 
