@@ -1,6 +1,6 @@
 <script>
-  import PostList from '$lib/components/posts/PostList.svelte';
-  import SearchBox from '$lib/components/ui/SearchBox.svelte';
+  import PostList from '$lib/components/features/posts/PostList.svelte';
+  import SearchBox from '$lib/components/common/SearchBox.svelte';
   
   // 게시글 목록, 검색 등은 API 연동 필요(추후 구현)
   let posts = [

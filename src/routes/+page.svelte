@@ -1,5 +1,5 @@
 <script>
-  import SearchBox from '$lib/components/ui/SearchBox.svelte';
+  import SearchBox from '$lib/components/common/SearchBox.svelte';
   
   // 실제 데이터는 API 연동 필요, 샘플 데이터
   let user = { name: 'John Doe', role: 'USER' };

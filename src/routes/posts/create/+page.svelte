@@ -1,5 +1,5 @@
 <script>
-  import PostForm from '$lib/components/posts/PostForm.svelte';
+  import PostForm from '$lib/components/features/posts/PostForm.svelte';
 </script>
 <div class="min-h-screen bg-gray-100 py-12 px-4">
   <div class="max-w-xl mx-auto">

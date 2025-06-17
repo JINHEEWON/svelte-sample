@@ -1,7 +1,7 @@
 <script>
-  import FileUpload from '$lib/components/files/FileUpload.svelte';
-  import FileList from '$lib/components/files/FileList.svelte';
-  import SearchBox from '$lib/components/ui/SearchBox.svelte';
+  import FileUpload from '$lib/components/features/files/FileUpload.svelte';
+  import FileList from '$lib/components/features/files/FileList.svelte';
+  import SearchBox from '$lib/components/common/SearchBox.svelte';
   
   let files = [
     { 

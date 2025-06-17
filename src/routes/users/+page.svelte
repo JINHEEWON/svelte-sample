@@ -1,5 +1,5 @@
 <script>
-  import SearchBox from '$lib/components/ui/SearchBox.svelte';
+  import SearchBox from '$lib/components/common/SearchBox.svelte';
   
   // 실제로는 API에서 사용자 목록을 받아와야 함
   let users = [
