@@ -1,7 +1,7 @@
 <script>
   // 실제 데이터는 API 연동 필요, 샘플 데이터
   let user = { name: '홍길동' };
-  let stats = { posts: 3, files: 2 };
+  let stats = { posts: 3, files: 2, points: 1024 };
   let recentPosts = [
     { id: 1, title: 'SvelteKit 도입 후기', author: '홍길동', createdAt: '2024-06-12' },
     { id: 2, title: 'Spring Boot 파일 업로드 전략', author: '김철수', createdAt: '2024-06-11' }
@@ -17,29 +17,51 @@
   ];
 </script>
 
-<div class="max-w-2xl mx-auto py-12">
-  <h1 class="text-2xl font-bold mb-4">{user.name}님, 환영합니다!</h1>
-  <div class="mb-6 grid grid-cols-2 gap-4">
-    <div class="bg-blue-50 p-4 rounded">
-      <div class="text-sm text-gray-500">작성한 게시글</div>
-      <div class="text-2xl font-bold">{stats.posts}</div>
+<div class="min-h-screen bg-gray-100 py-12 px-4">
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-3xl md:text-4xl font-extrabold mb-10 text-gray-900">👋 {user.name}님, 환영합니다!</h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+      <div class="bg-white rounded-2xl shadow-xl border p-8 flex flex-col items-center hover:shadow-2xl transition">
+        <div class="text-5xl mb-2">📝</div>
+        <div class="text-2xl font-bold text-blue-600 mb-1">{stats.posts}</div>
+        <div class="uppercase text-xs tracking-wider text-gray-500">게시글</div>
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl border p-8 flex flex-col items-center hover:shadow-2xl transition">
+        <div class="text-5xl mb-2">📁</div>
+        <div class="text-2xl font-bold text-green-600 mb-1">{stats.files}</div>
+        <div class="uppercase text-xs tracking-wider text-gray-500">파일</div>
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl border p-8 flex flex-col items-center hover:shadow-2xl transition">
+        <div class="text-5xl mb-2">⭐</div>
+        <div class="text-2xl font-bold text-yellow-500 mb-1">{stats.points}</div>
+        <div class="uppercase text-xs tracking-wider text-gray-500">포인트</div>
+      </div>
     </div>
-    <div class="bg-green-50 p-4 rounded">
-      <div class="text-sm text-gray-500">업로드한 파일</div>
-      <div class="text-2xl font-bold">{stats.files}</div>
+    <div class="grid md:grid-cols-2 gap-8 mb-10">
+      <div class="bg-white rounded-2xl shadow-xl border p-8">
+        <div class="flex items-center mb-4">
+          <div class="text-lg font-semibold text-gray-900 flex-1">바로가기</div>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <a href="/posts/create" class="flex items-center gap-2 px-5 py-2 bg-blue-600 text-white rounded-full shadow hover:scale-105 transition">
+            <span>➕</span> 새 게시글
+          </a>
+          <a href="/files" class="flex items-center gap-2 px-5 py-2 bg-green-600 text-white rounded-full shadow hover:scale-105 transition">
+            <span>⬆️</span> 파일 업로드
+          </a>
+          <a href="/users" class="flex items-center gap-2 px-5 py-2 bg-gray-600 text-white rounded-full shadow hover:scale-105 transition">
+            <span>👤</span> 내 프로필
+          </a>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl border p-8">
+        <div class="flex items-center mb-4">
+          <div class="text-lg font-semibold text-gray-900 flex-1">공지사항</div>
+          <span class="text-yellow-400 text-xl">📢</span>
+        </div>
+        <div class="text-gray-700 text-sm">서비스가 곧 <span class="font-bold text-blue-600">정식 오픈</span>됩니다!</div>
+      </div>
     </div>
-  </div>
-  <div class="mb-6">
-    <h2 class="text-lg font-semibold mb-2">바로가기</h2>
-    <div class="flex gap-4">
-      <a href="/posts/create" class="px-4 py-2 bg-blue-600 text-white rounded">새 게시글</a>
-      <a href="/files" class="px-4 py-2 bg-green-600 text-white rounded">파일 업로드</a>
-      <a href="/users" class="px-4 py-2 bg-gray-600 text-white rounded">내 프로필</a>
-    </div>
-  </div>
-  <div class="bg-yellow-50 p-4 rounded">
-    <h2 class="font-semibold mb-1">공지사항</h2>
-    <p class="text-sm text-gray-700">서비스가 곧 정식 오픈됩니다!</p>
   </div>
 </div>
 
